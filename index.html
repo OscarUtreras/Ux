@@ -7,10 +7,11 @@
 </head>
 <body>
   <div id="app">
-    <v-app>
+    <v-app dark>
         <header>
+          <div class="toolbar">
             <v-toolbar app>
-                <img src="kf4-logo-vtr-2.png">
+                <img src="logo2.png">
                 <v-toolbar-items class="hidden-sm-and-down">
                     <v-btn flat>Packs</v-btn>
                     <v-btn flat>Internet</v-btn>
@@ -20,23 +21,91 @@
                     <v-btn flat>Centro de Ayuda</v-btn>
                 </v-toolbar-items>
             </v-toolbar>
+          </div>
         </header>
         <v-content>
-            <p class="text-md-center">Ingresar Reclamo</p>
-            <label>Título:</label>
-            <input v-model="message" placeholder="edit me">
-            <br>
-            <label>Contenido:</label>
-            <input v-model="message" placeholder="edit me">
+            <p class="titulo">Ingresar Reclamo</p>
+            <div class="parrafo">
+                <label for="titulo">Título:</label>
+                <input v-model="titulo" id="titulo" placeholder="Asigna un título">
+                <br>
+            </div>
+            <div class="parrafo">
+                <label for="contenido">Contenido:</label>
+                <input v-model="contenido" id="contenido" placeholder="Agrega contenido">
+                <br>
+            </div>
+            <div class="boton">
+                <v-btn color="orange">Ingresar</v-btn>
+                <v-btn color="orange">Cancelar</v-btn>
+            </div>
         </v-content>
-      <v-footer app></v-footer>
+        <footer class="pa-3">
+            <v-layout row wrap>
+              <v-flex xs4 py-3 text-xs-left white--text>
+                <p>Nuestra empresa</p>
+                <ul>
+                  <li>Conócenos</li>
+                  <li>Sala de Prensa</li>
+                  <li>VTR Internet Segura</li>
+                  <li>Zona de Proveedores</li>
+                  <li>Inmobiliaria</li>
+                  <li>Lugares y formas de Pago</li>
+                  <li>Carrier 111</li>
+                </ul>
+              </v-flex>
+              <v-flex xs4 py-3 text-xs-left white--text>
+                  <p>Términos y regulaciones</p>
+                  <ul>
+                    <li>Contrato de servicios VTR</li>
+                    <li>Cotizador de Servicios</li>
+                    <li>Liberacion de equipos</li>
+                    <li>Multibanda SAE - Consulta de IMEI</li>
+                    <li>Nueva normativa de móviles</li>
+                    <li>Sistema de Alerta Emergencias (SAE)</li>
+                    <li>Ley de Neutralidad</li>
+                  </ul>
+              </v-flex>
+              <v-flex xs4 py-3 text-xs-left white--text>
+                  <p>Entretención</p>
+                  <ul>
+                    <li>Canales HD</li>
+                    <li>VTR Play</li>
+                    <li>Concursos</li>
+                  </ul>
+              </v-flex>
+            <v-layout row wrap>
+        </footer>
     </v-app>
   </div>
  
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
   <script>
-    new Vue({ el: '#app' })
+    new Vue({ 
+      el: '#app'
+       })
   </script>
 </body>
 </html>
+
+<style lang="css" scoped>
+  .parrafo{
+    font-family: verdana;
+    font-size: 20px;
+    padding-left: 80px;
+    padding-bottom: 40px;
+  }
+  .titulo{
+    font-family: verdana;
+    font-size: 40px;
+    text-align: center;
+  }
+  .boton{
+    text-align: center;
+    padding-top: 50px;
+  }
+  .pa-3{
+    background: #212121;
+  }
+</style>
