@@ -10,7 +10,7 @@
     <v-app>
         <header>
             <v-toolbar app>
-                <v-toolbar-title>Title</v-toolbar-title>
+                <img src="kf4-logo-vtr-2.png">
                 <v-toolbar-items class="hidden-sm-and-down">
                     <v-btn flat>Packs</v-btn>
                     <v-btn flat>Internet</v-btn>
@@ -22,6 +22,12 @@
             </v-toolbar>
         </header>
         <v-content>
+            <p class="text-md-center">Ingresar Reclamo</p>
+            <label>Título:</label>
+            <input v-model="message" placeholder="edit me">
+            <br>
+            <label>Contenido:</label>
+            <input v-model="message" placeholder="edit me">
         </v-content>
       <v-footer app></v-footer>
     </v-app>
